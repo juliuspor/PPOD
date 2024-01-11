@@ -9,3 +9,4 @@ In each directory there is a `requirements.txt` with the required libraries.
 ## Group Members
 - Julius Porbeck
 - Emirkan Toplu
+- Ahmad Kharoub
