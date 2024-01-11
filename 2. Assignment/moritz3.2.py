@@ -196,14 +196,6 @@ def build_anonymized_dataset_sensitives_combined(df, partitions, feature_columns
 # t-closeness
 
 def t_closeness_numerical(df, partition, column):
-    """
-    Compute t-closeness for numerical values using the Kolmogorov-Smirnov statistic.
-
-    :param df: DataFrame containing the data.
-    :param partition: List of indices representing a partition of the data.
-    :param column: The column name of the numerical attribute to check for t-closeness.
-    :return: The maximum KS statistic value (distance) between the partition and the entire dataset.
-    """
     # Extract the values of the column for the entire dataset and the partition
     full_data = df[column]
     partition_data = df.loc[partition, column]
@@ -214,15 +206,6 @@ def t_closeness_numerical(df, partition, column):
 
 
 def t_closeness_categorical(df, partition, column, global_freqs):
-    """
-    Compute t-closeness for categorical values using the Kolmogorov-Smirnov statistic.
-
-    :param df: DataFrame containing the data.
-    :param partition: List of indices representing a partition of the data.
-    :param column: The column name of the categorical attribute to check for t-closeness.
-    :param global_freqs: Dictionary containing the frequencies for all the different values.
-    :return: The maximum KS statistic value (distance) between the partition and the entire dataset.
-    """
     total_count = float(len(partition))
     d_max = None
     group_counts = df.loc[partition].groupby(column, observed=False)[column].agg('count')
@@ -235,15 +218,6 @@ def t_closeness_categorical(df, partition, column, global_freqs):
 
 
 def is_t_close(df, partition, sensitive_columns, global_freqs, t=0.3):
-    """
-    Check if a partition is t-close.
-
-    :param               df: The dataframe for which to check t-closeness
-    :param        partition: The partition of the dataframe on which to check t-closeness
-    :param sensitive_columns: A list of the names of the sensitive columns
-    :param     global_freqs: The global frequencies of the sensitive attribute values
-    :param                p: The maximum allowed distance
-    """
     for sensitive_column in sensitive_columns:
         if sensitive_column not in categorical:
             distance = t_closeness_numerical(df, partition, sensitive_column)
