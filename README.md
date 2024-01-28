@@ -9,11 +9,10 @@ The primary solution are in the different jupyter notebooks. They contain both t
 In each directory there is a `requirements.txt` with the required libraries.
 
 
-## special characteristics
-- 3.1: Describes our algorithm + also applies it to the dataset 
-- 3.2: Contains (k-anonymity + t-closeness) and (k-anonymity + l-diversity)
-- 3.3: -
-- 3.4: -
+## special characteristics for #4-5 Assignment
+- 3.1+3.2.ipynb: Contains 4.3.1 + 4.3.2
+- 3.3+3.4.ipynb: Contains 4.3.3 + 4.3.4
+
 
 
 ## Group Members
