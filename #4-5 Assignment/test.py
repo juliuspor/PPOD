@@ -1,8 +1,11 @@
 import pandas as pd
-
+import matplotlib.pyplot as plt
+from scipy import stats
+import numpy as np
+from prince import FAMD
 # Load the dataset
 df = pd.read_csv('police_shooting_anonymized.csv')
-from prince import FAMD
+
 
 # Initialize FAMD object: specifying the number of components (n_components)
 famd = FAMD(n_components=2, n_iter=3, random_state=42)
@@ -12,9 +15,7 @@ famd = famd.fit(df)
 
 # Transform the dataset
 df_transformed = famd.transform(df)
-import matplotlib.pyplot as plt
-from scipy import stats
-import numpy as np
+
 
 # Assuming 'df_transformed' is the DataFrame obtained after applying FAMD
 z_scores = np.abs(stats.zscore(df_transformed))
