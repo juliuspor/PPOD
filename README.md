@@ -10,7 +10,9 @@ In each directory there is a `requirements.txt` with the required libraries.
 
 
 ## Group Members
+Note: Max Bause decided on joining our team for #Assignment 4-5
+
 - Julius Porbeck
 - Emirkan Toplu
 - Ahmad Kharoub
-- Max 
+- Max Bause
