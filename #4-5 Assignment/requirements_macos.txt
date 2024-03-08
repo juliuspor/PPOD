@@ -1,0 +1,9 @@
+ipykernel
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+prince
+altair
+vegafusion[embed]
