@@ -9,13 +9,8 @@ The primary solution are in the different jupyter notebooks. They contain both t
 In each directory there is a `requirements.txt` with the required libraries.
 
 
-## special characteristics for #4-5 Assignment
-- 3.1+3.2.ipynb: Contains 4.3.1 + 4.3.2
-- 3.3+3.4.ipynb: Contains 4.3.3 + 4.3.4
-
-
-
 ## Group Members
 - Julius Porbeck
 - Emirkan Toplu
 - Ahmad Kharoub
+- Max 
